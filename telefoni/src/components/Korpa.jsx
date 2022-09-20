@@ -5,19 +5,22 @@ const Korpa = ({ telefoni }) => {
     function zbir(){
         var z = 0;
         telefoni.forEach((prod) => {
-            z = z + prod.cena;
+            z = z + prod.cena * prod.kolicina;
           });
           return z;
     }
   return (
-    <div className="cart-container">
-      <h3>This is your cart.</h3>
+    <>
+    <div className="telefoni">
+      
       {telefoni.map((prod) => (
-        <Telefon pr={prod} key={prod.id} />
+        <Telefon pr={prod} key={prod.id} kor={1}/>
       ))}
 
-      <p>Ukuona cena : {zbir()}</p>
+      
     </div>
+    <p>Ukuona cena : {zbir()}</p>
+    </>
   );
 };
 

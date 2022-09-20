@@ -6,7 +6,7 @@ const Telefoni = ({przi, dodaj, oduzmi}) => {
     <div className='telefoni'>
 
 {przi.map((prod) => (
-        <Telefon pr = {prod} key={prod.id} dodaj={dodaj} oduzmi = {oduzmi}/>
+        <Telefon pr = {prod} key={prod.id} dodaj={dodaj} oduzmi = {oduzmi} kor={0}/>
       ))}
         {}
     </div>
