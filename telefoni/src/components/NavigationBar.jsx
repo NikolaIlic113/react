@@ -1,11 +1,21 @@
+
+
 import React from 'react'
+import { BsFillPhoneFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 function NavigationBar() {
   return (
     <div className='navigationBar'>
-      <a>Pocetna</a>
+      <Link to="/">Pocetna</Link>
+      <Link to="/pice">
+        <BsFillPhoneFill />
+      </Link>
       </div>
   )
 }
+	
+
+
 
 export default NavigationBar
