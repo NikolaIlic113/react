@@ -1,12 +1,12 @@
 import React from 'react'
 import Telefon from './Telefon.jsx'
 
-const Telefoni = ({przi}) => {
+const Telefoni = ({przi, dodaj, oduzmi}) => {
   return (
     <div className='telefoni'>
 
 {przi.map((prod) => (
-        <Telefon pr = {prod} br = {prod.amount} key={prod.id}/>
+        <Telefon pr = {prod} key={prod.id} dodaj={dodaj} oduzmi = {oduzmi}/>
       ))}
         {}
     </div>
