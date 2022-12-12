@@ -9,7 +9,7 @@ function NavigationBar() {
   return (
     <div className='navigationBar'>
       <Link to="/">Pocetna</Link>
-      <Link to="/pice" className='ikonica'>
+      <Link to="/skup" className='ikonica'>
         <BsFillPhoneFill />
       </Link>
       <Link to="/korpa" className='ikonica'>

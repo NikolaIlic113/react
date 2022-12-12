@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 import NavigationBar from './components/NavigationBar';
 import Telefoni from './components/Telefoni';
@@ -17,10 +17,10 @@ function App() {
     {
       id: 1,
       kolicina:0,
-      cena:100,
+      cena:350,
       model: "Samsung",
       specifikacije:
-        "Sir, šunka, šampinjoni, masline",
+        "Velicina ekrana = 4,9'', RAM = 8gb, baterija = 3000mAh",
       amount: 0,
       vrsta: "skup",
       slika: "1",
@@ -31,7 +31,7 @@ function App() {
       cena:200,
       model: "Nokia",
       specifikacije:
-        "Pepperoni, sir",
+        "Velicina ekrana = 4,7'', RAM = 6gb, baterija = 2500mAh",
       amount: 0,
       vrsta: "jeftin",
       slika: "2",
@@ -39,10 +39,10 @@ function App() {
     {
       id: 3,
       kolicina:0,
-      cena:300,
+      cena:500,
       model: "Apple",
       specifikacije:
-        "Sir, gorgonzola, parmezan, dimljeni sir",
+        "Velicina ekrana = 6,4'', RAM = 8gb, baterija = 3500mAh",
       amount: 0,
       vrsta: "skup",
       slika: "3",
@@ -50,10 +50,10 @@ function App() {
     {
       id: 4,
       kolicina:0,
-      cena:400,
+      cena:250,
       model: "Huawei",
       specifikacije:
-        "Sir, šunka, pančeta, kisela pavlaka, šampinjoni",
+        "Velicina ekrana = 4,0'', RAM = 4gb, baterija = 2000mAh",
       amount: 0,
       vrsta: "jeftin",
       slika: "4",
@@ -112,7 +112,7 @@ function App() {
         />
         <Route path="/jeftini"
           element={<Telefoni przi={vrsta("jeftin")} dodaj = {dodaj} oduzmi = {oduzmi} />} />
-      <Route path="/skupi"
+      <Route path="/skup"
           element={<Telefoni przi={vrsta("skup") }  dodaj = {dodaj} oduzmi = {oduzmi}/>} />
 
           <Route path="/korpa" element={<Korpa telefoni={korpaTelefoni} />} />
