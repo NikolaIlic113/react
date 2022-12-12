@@ -5,6 +5,7 @@ import Telefoni from './components/Telefoni';
 import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Korpa from './components/Korpa';
+import BottomBar from './components/BottomBar';
 
 
 function App() {
@@ -21,7 +22,8 @@ function App() {
       specifikacije:
         "Sir, šunka, šampinjoni, masline",
       amount: 0,
-      vrsta: "pice",
+      vrsta: "skup",
+      slika: "1",
     },
     {
       id: 2,
@@ -31,7 +33,8 @@ function App() {
       specifikacije:
         "Pepperoni, sir",
       amount: 0,
-      vrsta: "pice",
+      vrsta: "jeftin",
+      slika: "2",
     },
     {
       id: 3,
@@ -41,7 +44,8 @@ function App() {
       specifikacije:
         "Sir, gorgonzola, parmezan, dimljeni sir",
       amount: 0,
-      vrsta: "pice",
+      vrsta: "skup",
+      slika: "3",
     },
     {
       id: 4,
@@ -51,7 +55,8 @@ function App() {
       specifikacije:
         "Sir, šunka, pančeta, kisela pavlaka, šampinjoni",
       amount: 0,
-      vrsta: "pice",
+      vrsta: "jeftin",
+      slika: "4",
     },
   ]);
 
@@ -105,13 +110,14 @@ function App() {
           path="/"
           element={<Telefoni przi={telefoni} dodaj={dodaj} oduzmi = {oduzmi}/>}
         />
-        <Route path="/pice"
-          element={<Telefoni przi={vrsta("pice")} dodaj = {dodaj} oduzmi = {oduzmi} />} />
-      <Route path="/burgeri"
-          element={<Telefoni przi={vrsta("burgeri") }  dodaj = {dodaj} oduzmi = {oduzmi}/>} />
+        <Route path="/jeftini"
+          element={<Telefoni przi={vrsta("jeftin")} dodaj = {dodaj} oduzmi = {oduzmi} />} />
+      <Route path="/skupi"
+          element={<Telefoni przi={vrsta("skup") }  dodaj = {dodaj} oduzmi = {oduzmi}/>} />
 
           <Route path="/korpa" element={<Korpa telefoni={korpaTelefoni} />} />
       </Routes>
+      <BottomBar></BottomBar>
     </BrowserRouter>
   );
 }
