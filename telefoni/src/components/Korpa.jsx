@@ -19,7 +19,7 @@ const Korpa = ({ telefoni }) => {
 
       
     </div>
-    <p>Ukupna cena : {zbir()}</p>
+    <h4>Ukupna cena : {zbir()}</h4>
     </>
   );
 };

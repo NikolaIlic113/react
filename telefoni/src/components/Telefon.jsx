@@ -3,6 +3,7 @@ import samsung from 'D:/Faks/4. godina/iteh/domaci3/telefoni/src/slike/1.jpg';
 import nokia from 'D:/Faks/4. godina/iteh/domaci3/telefoni/src/slike/2.jpg';
 import apple from 'D:/Faks/4. godina/iteh/domaci3/telefoni/src/slike/3.jpg';
 import huawei from 'D:/Faks/4. godina/iteh/domaci3/telefoni/src/slike/4.jpg';
+import xiaomi from 'D:/Faks/4. godina/iteh/domaci3/telefoni/src/slike/5.jpg';
 
 
 function Telefon({pr, dodaj, oduzmi, kor}) {
@@ -19,9 +20,13 @@ function Telefon({pr, dodaj, oduzmi, kor}) {
                   pr.slika === "3" ? (
                     <img className = "slika" src={apple}></img>
                       ): (
+                        pr.slika === "4" ? (
                         <img className = "slika" src={huawei}></img>
+                          ) : (
+                            <img className = "slika" src={xiaomi}></img>
                           )
                     )
+                )
               )}
         <h3 className="kartica-naslov">{pr.model}</h3>
         <p className="kartica-specifikacije">{pr.specifikacije}</p>

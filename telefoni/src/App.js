@@ -17,7 +17,7 @@ function App() {
     {
       id: 1,
       kolicina:0,
-      cena:350,
+      cena:450,
       model: "Samsung",
       specifikacije:
         "Velicina ekrana = 4,9'', RAM = 8gb, baterija = 3000mAh",
@@ -39,7 +39,7 @@ function App() {
     {
       id: 3,
       kolicina:0,
-      cena:500,
+      cena:650,
       model: "Apple",
       specifikacije:
         "Velicina ekrana = 6,4'', RAM = 8gb, baterija = 3500mAh",
@@ -50,7 +50,7 @@ function App() {
     {
       id: 4,
       kolicina:0,
-      cena:250,
+      cena:300,
       model: "Huawei",
       specifikacije:
         "Velicina ekrana = 4,0'', RAM = 4gb, baterija = 2000mAh",
@@ -58,13 +58,24 @@ function App() {
       vrsta: "jeftin",
       slika: "4",
     },
+    {
+      id: 5,
+      kolicina:0,
+      cena:330,
+      model: "Xiaomi",
+      specifikacije:
+        "Velicina ekrana = 4,2'', RAM = 4gb, baterija = 2300mAh",
+      amount: 0,
+      vrsta: "jeftin",
+      slika: "5",
+    },
   ]);
 
   // const [telefoni] = useState(pice);
 
   function vrsta(v){
-    let telefoni_pice = telefoni.filter((prod) => prod.vrsta === v);
-    return telefoni_pice;
+    let telefoni_mob = telefoni.filter((prod) => prod.vrsta === v);
+    return telefoni_mob;
   }
 
   function korpa() {
@@ -110,7 +121,7 @@ function App() {
           path="/"
           element={<Telefoni przi={telefoni} dodaj={dodaj} oduzmi = {oduzmi}/>}
         />
-        <Route path="/jeftini"
+        <Route path="/jeftin"
           element={<Telefoni przi={vrsta("jeftin")} dodaj = {dodaj} oduzmi = {oduzmi} />} />
       <Route path="/skup"
           element={<Telefoni przi={vrsta("skup") }  dodaj = {dodaj} oduzmi = {oduzmi}/>} />
